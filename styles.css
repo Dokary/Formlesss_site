@@ -571,3 +571,14 @@ form {
         max-width: 100px;
     }
 }
+
+#title-collection {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}
