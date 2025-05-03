@@ -62,8 +62,8 @@
     </section>
 
     <section class="product-desc">
-        <h2 class="desc-title">DESCRIPTION</h2>
-        <p>Cette bague argentée séduit par son design distinctif et raffiné, pensé pour attirer l’œil sans jamais en faire trop. Fabriquée en argent 925, un alliage reconnu pour sa durabilité, sa brillance naturelle et sa haute tolérance cutanée, elle allie élégance et qualité. La monture travaillée avec soin accueille une constellation de petites gemmes violettes, disposées de manière à capter chaque rayon de lumière et à créer des reflets subtils mais captivants.
+        <h2 class="desc-title">DESCRIPTION <i class="fa-solid fa-chevron-down"></i></h2>
+        <p class="product-txt">Cette bague argentée séduit par son design distinctif et raffiné, pensé pour attirer l’œil sans jamais en faire trop. Fabriquée en argent 925, un alliage reconnu pour sa durabilité, sa brillance naturelle et sa haute tolérance cutanée, elle allie élégance et qualité. La monture travaillée avec soin accueille une constellation de petites gemmes violettes, disposées de manière à capter chaque rayon de lumière et à créer des reflets subtils mais captivants.
             Les détails du design, légèrement audacieux, évoquent une esthétique à la fois moderne et intemporelle, parfaite pour celles et ceux qui recherchent un bijou qui ne passe pas inaperçu. Que ce soit pour compléter une tenue de soirée ou pour ajouter une touche de caractère à un look quotidien, cette bague en argent se distingue par son équilibre entre éclat et originalité. Un bijou qui exprime à la fois force et délicatesse, conçu pour durer et pour sublimer toutes les mains.
             
             
@@ -73,8 +73,8 @@
     </section>
 
     <section class="product-desc">
-        <h2 class="desc-title">GUIDE D'ENTRETIEN</h2>
-        <p>Pour préserver l’éclat de votre bague et la beauté de ses gemmes violettes, nous vous conseillons les gestes suivants :
+        <h2 class="desc-title">GUIDE D'ENTRETIEN <i class="fa-solid fa-chevron-down"></i></h2>
+        <p class="product-txt">Pour préserver l’éclat de votre bague et la beauté de ses gemmes violettes, nous vous conseillons les gestes suivants :
 
             Nettoyez régulièrement votre bijou avec un chiffon doux ou une lingette spéciale argent. Pour un nettoyage plus complet, utilisez de l’eau tiède savonneuse et une brosse souple, puis rincez à l’eau claire et séchez délicatement.
             
@@ -85,7 +85,7 @@
             Retirez-la avant de dormir, de vous doucher ou de pratiquer une activité physique.
             Un entretien régulier permet de conserver durablement la brillance de l’argent et l’éclat des gemmes.</p>
     </section>
-    <h2 class="desc-title" id="desc-isol">PRODUITS LIÉS</h2>
+    <h2 class="desc-title" id="desc-isol">PRODUITS LIÉS </h2>
     <section class="product-slider">
        
         <button class="slider-arrow prev-arrow">
@@ -248,5 +248,28 @@
             <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
+
+    <script>
+        const product_desc = document.getElementsByClassName('product-desc');
+        
+        console.log(product_desc);
+        for(let desc of product_desc){
+            desc.addEventListener('click', function() {
+                const txt = desc.querySelector('.product-txt');
+                const icon = desc.querySelector('i');
+                if (txt.style.display === "none") {
+                    txt.style.display = "block";
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    txt.style.display = "none";
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        }
+
+    
+    </script>
 </body>
 </html>
