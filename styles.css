@@ -207,22 +207,36 @@ header {
 
 .product-container {
     display: flex;
+    height: 100%;
     gap: 20px;
-    max-width: 1200px;
-    overflow: hidden;
+    max-width: 60%;
+   
+    overflow: scroll;
+    scrollbar-width: none;
+
 }
 
 .product-item {
+    flex: 1;
     background-color: #2a2a2a;
-    border-radius: 10px;
-    overflow: hidden;
+    aspect-ratio: 1/1;
     width: 200px;
     height: 200px;
+    border-radius: 10px;
 
-    img {
+  img {
         height: 100%;
         width: 100%;
+        border-radius: 10px;  
     }
+}
+
+.item-img {
+    border-radius: 10px;
+}
+
+.img-on {
+    border-radius: 10px;
 }
 
 .img-off, .product-item:hover .img-on {

@@ -37,39 +37,52 @@
         <section class="hero">
                 <h1>FORMLESS</h1>
                 <h2>DES BIJOUX ORIGINAUX, POUR TOUS</h2>
-                <a href="#" class="cta-button">DÉCOUVRIR</a>
+                <a href="./Pages/Catalogue.html" class="cta-button">DÉCOUVRIR</a>
         </section>
+        <h2 id="title-collection">Notre dernière collection</h2>
+        <section class="product-slider">
+            <button  id="previous-button" class="slider-arrow prev-arrow">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div id="scroll-container" class="product-container">
+                <div class="product-item">
+                    <img class="img-on item-img" src="./img/images/Bijou1.jpg    " alt="Bijou 1">
 
+                    <img class="item-img img-off" src="./img/images/Bijou1_hover.png" alt="Bijou 1">
+                </div>
+                <div class="product-item">
+                    <img class="item-img img-on" src="./img/images/Bijou2.jpg" alt="Bijou 2">
+
+                    <img class="item-img img-off" src="./img/images/Bijou2_hover.jpg" alt="Bijou 2">
+                </div>
+                <div class="product-item">
+                    <img class="item-img img-on" src="./img/images/Bijou3.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="./img/images/Bijou3_hover.jpg" alt="Bijou 3">
+                </div>
+                  <div class="product-item">
+                    <img class="item-img img-on" src="./img/images/Bijou3.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="./img/images/Bijou3_hover.jpg" alt="Bijou 3">
+                </div>
+                  <div class="product-item">
+                    <img class="item-img img-on" src="./img/images/Bijou3.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="./img/images/Bijou3_hover.jpg" alt="Bijou 3">
+                </div>
+                  <div class="product-item">
+                    <img class="item-img img-on" src="./img/images/Bijou3.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="./img/images/Bijou3_hover.jpg" alt="Bijou 3">
+                </div>
+                
+            </div>
+            <button  id="next-button" class="slider-arrow next-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </section>
         <section class="hero-p2">
             <h2>Découvrez nos produits phares</h2>
             <a href="#" class="cta-button">ACHETER MAINTENANT</a>
         </section>
 
-        <h2 id="title-collection">Notre dernière collection</h2>
-        <section class="product-slider">
-            <button class="slider-arrow prev-arrow">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="product-container">
-                <div class="product-item">
-                    <img class="img-on" src="./img/images/Bijou1.jpg    " alt="Bijou 1">
-
-                    <img class="img-off" src="./img/images/Bijou1_hover.png" alt="Bijou 1">
-                </div>
-                <div class="product-item">
-                    <img class="img-on" src="./img/images/Bijou2.jpg" alt="Bijou 2">
-
-                    <img class="img-off" src="./img/images/Bijou2_hover.jpg" alt="Bijou 2">
-                </div>
-                <div class="product-item">
-                    <img class="img-on" src="./img/images/Bijou3.jpg" alt="Bijou 3">
-                    <img class="img-off" src="./img/images/Bijou3_hover.jpg" alt="Bijou 3">
-                </div>
-            </div>
-            <button class="slider-arrow next-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </section>
+        
     </main>
 
     <footer>
@@ -133,5 +146,19 @@
             <a href="#./Pages/Construction.html" class="social-link"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
+
+    <script>
+        let nxtButton = document.getElementById("next-button")
+        let prevButton = document.getElementById("previous-button")
+        let scroolcontainer = document.getElementById("scroll-container")
+
+        nxtButton.addEventListener("click", function () {
+            scroolcontainer.scrollLeft = scroolcontainer.scrollWidth
+        })
+
+        prevButton.addEventListener("click", function () {
+            scroolcontainer.scrollLeft = 0
+        })
+    </script>
 </body>
 </html>
