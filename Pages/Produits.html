@@ -34,12 +34,13 @@
 <main>
     <section class="product">
         <div class="product-img_container">
-<img src="../img/images/Bijou1.jpg" alt="" class="main-img">
+<img src="../img/images/Bijou1.jpg" alt="" id="main-img" class="main-img">
 <div class="img-slider">
-    <img src="../img/images/Bijou1_Var1.png" alt="">
-    <img src="../img/images/Bijou1_Var2.png" alt="">
+    <img src="../img/images/Bijou1_Var1.png" class="caroussel-img" alt="">
+    <img src="../img/images/Bijou1_Var2.png" class="caroussel-img" alt="">
+    <img src="../img/images/Bijou1.jpg" class="caroussel-img" alt="">
     <button class="slider-arrow next-arrow" id="product-btn">
-        <i class="fas fa-chevron-right"></i>
+        <i id="img-arrow" class="fas fa-chevron-right"></i>
     </button>
 </div>
         </div>
@@ -251,7 +252,16 @@
 
     <script>
         const product_desc = document.getElementsByClassName('product-desc');
+        let mainimgindex = 0;
+        let img_arrow = document.getElementById("img-arrow");
+        let mainImg = document.getElementById("main-img")
+        let img_carroussel = document.getElementsByClassName("caroussel-img")
         
+        img_arrow.addEventListener("click", () => {
+            mainimgindex = (mainimgindex - 1 + img_carroussel.length) % img_carroussel.length
+            mainImg.src = img_carroussel[mainimgindex].src
+        })
+
         console.log(product_desc);
         for(let desc of product_desc){
             desc.addEventListener('click', function() {
@@ -268,6 +278,8 @@
                 }
             });
         }
+
+
 
     
     </script>
