@@ -87,32 +87,39 @@
             Un entretien régulier permet de conserver durablement la brillance de l’argent et l’éclat des gemmes.</p>
     </section>
     <h2 class="desc-title" id="desc-isol">PRODUITS LIÉS </h2>
-    <section class="product-slider">
-       
-        <button class="slider-arrow prev-arrow">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="product-container">
-            <div class="product-item">
-                <img class="img-on" src="../img/images/Bijou2.jpg" alt="Bijou 1">
+   </section>
+        <section class="product-slider">
+            <button id="previous-button" class="slider-arrow prev-arrow">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div id="scroll-container" class="product-container">
+                <div class="product-item">
+                    <img class="item-img img-on" src="../img/images/Bijou2.jpg" alt="Bijou 2">
 
-                <img class="img-off" src="../img/images/Bijou2_hover.jpg" alt="Bijou 1">
-            </div>
-            <div class="product-item">
-                <img class="img-on" src="../img/images/Bijou3.jpg" alt="Bijou 2">
+                    <img class="item-img img-off" src="../img/images/Bijou2_hover.jpg" alt="Bijou 2">
+                </div>
+                <div class="product-item">
+                    <img class="item-img img-on" src="../img/images/Bijou3.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="../img/images/Bijou3_hover.jpg" alt="Bijou 3">
+                </div>
+                <div class="product-item">
+                    <img class="item-img img-on" src="../img/images/Bijou4.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="../img/images/Bijou4_hover.jpg" alt="Bijou 3">
+                </div>
+                <div class="product-item">
+                    <img class="item-img img-on" src="../img/images/Bijou5.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="../img/images/Bijou5_hover.jpg" alt="Bijou 3">
+                </div>
+                <div class="product-item">
+                    <img class="item-img img-on" src="../img/images/Bijou6.jpg" alt="Bijou 3">
+                    <img class="item-img img-off" src="../img/images/Bijou6_hover.jpg" alt="Bijou 3">
+                </div>
 
-                <img class="img-off" src="../img/images/Bijou3_hover.jpg" alt="Bijou 2">
             </div>
-            <div class="product-item">
-                <img class="img-on" src="../img/images/Bijou4.jpg" alt="Bijou 3">
-                <img class="img-off" src="../img/images/Bijou4_hover.jpg" alt="Bijou 3">
-            </div>
-        </div>
-        <button class="slider-arrow next-arrow">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </section>
-
+            <button id="next-button" class="slider-arrow next-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </section>
 
     <h2 class="desc-title" id="desc-isol">AVIS CLIENTS</h2>
     <section class="rating-container">
@@ -280,8 +287,18 @@
         }
 
 
+        let nxtButton = document.getElementById("next-button")
+        let prevButton = document.getElementById("previous-button")
+        let scroolcontainer = document.getElementById("scroll-container")
 
-    
+        nxtButton.addEventListener("click", function () {
+            scroolcontainer.scrollLeft = scroolcontainer.scrollWidth
+        })
+
+        prevButton.addEventListener("click", function () {
+            scroolcontainer.scrollLeft = 0
+        })
+
     </script>
 </body>
 </html>
