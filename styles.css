@@ -638,6 +638,10 @@ form {
     justify-content: center;
     align-items: center;
 
+    #about-us_txt {
+        font-size: 25px;
+    }
+
 
     .about-us_bloc {
         height: 600px;
