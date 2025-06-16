@@ -77,13 +77,13 @@
         <h2 class="desc-title">GUIDE D'ENTRETIEN <i class="fa-solid fa-chevron-down"></i></h2>
         <p class="product-txt">Pour préserver l’éclat de votre bague et la beauté de ses gemmes violettes, nous vous conseillons les gestes suivants :
 
-            Nettoyez régulièrement votre bijou avec un chiffon doux ou une lingette spéciale argent. Pour un nettoyage plus complet, utilisez de l’eau tiède savonneuse et une brosse souple, puis rincez à l’eau claire et séchez délicatement.
+            Nettoyez régulièrement votre bijou avec un chiffon doux ou une lingette spéciale argent. Pour un nettoyage plus complet, utilisez de l’eau tiède savonneuse et une brosse souple, puis rincez à l’eau claire et séchez délicatement.
             
-            Évitez le contact avec l’eau chlorée, les produits ménagers, les parfums ou les crèmes, qui peuvent ternir l’argent et abîmer les pierres.
+            Évitez le contact avec l’eau chlorée, les produits ménagers, les parfums ou les crèmes, qui peuvent ternir l’argent et abîmer les pierres.
             
-            Rangez votre bague à l’abri de l’humidité et de la lumière directe, dans une pochette en tissu ou une boîte à bijoux individuelle.
+            Rangez votre bague à l’abri de l’humidité et de la lumière directe, dans une pochette en tissu ou une boîte à bijoux individuelle.
             
-            Retirez-la avant de dormir, de vous doucher ou de pratiquer une activité physique.
+            Retirez-la avant de dormir, de vous doucher ou de pratiquer une activité physique.
             Un entretien régulier permet de conserver durablement la brillance de l’argent et l’éclat des gemmes.</p>
     </section>
     <h2 class="desc-title" id="desc-isol">PRODUITS LIÉS </h2>
@@ -171,30 +171,30 @@
 
     <div class="commentaire">
         <div class="commentaire-title">
-            <h3>Pussini Sushini</h3>
+            <h3>Julia B.</h3>
             <div class="stars">
                 <img src="../img/images/étoiles.png" alt="">
             </div>
         </div>
-        <p>Pussini sushini, e legendario wasabini catini</p>
+        <p>Très beau produit, la livraison à cependant été retardée.</p>
     </div>
     <div class="commentaire">
         <div class="commentaire-title">
-            <h3>Pussini Sushini</h3>
+            <h3>Alexis F.</h3>
             <div class="stars">
                 <img src="../img/images/étoiles.png" alt="">
             </div>
         </div>
-        <p>Pussini sushini, e legendario wasabini catini</p>
+        <p>Bague très élégante</p>
     </div>
     <div class="commentaire">
         <div class="commentaire-title">
-            <h3>Pussini Sushini</h3>
+            <h3>Camille L.</h3>
             <div class="stars">
                 <img src="../img/images/étoiles.png" alt="">
             </div>
         </div>
-        <p>Pussini sushini, e legendario wasabini catini</p>
+        <p>Les bijoux proposés par cette marque sont de très bonne facture </p>
     </div>
 
     </section>
@@ -260,7 +260,7 @@
     <script>
         const product_desc = document.getElementsByClassName('product-desc');
         let mainimgindex = 0;
-        let img_arrow = document.getElementById("img-arrow");
+        let img_arrow = document.getElementById("product-btn");
         let mainImg = document.getElementById("main-img")
         let img_carroussel = document.getElementsByClassName("caroussel-img")
         
@@ -268,7 +268,13 @@
             mainimgindex = (mainimgindex - 1 + img_carroussel.length) % img_carroussel.length
             mainImg.src = img_carroussel[mainimgindex].src
         })
+        for(let img of img_carroussel){
+            img.style.cursor = "pointer";
+            img.addEventListener("click", () => {
+                mainImg.src = img.src;
+        });
 
+        }
         console.log(product_desc);
         for(let desc of product_desc){
             desc.addEventListener('click', function() {
@@ -276,7 +282,7 @@
                 const icon = desc.querySelector('i');
                 if (txt.style.display === "none") {
                     txt.style.display = "block";
-                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.remove('fa-chevron-up'); 
                     icon.classList.add('fa-chevron-down');
                 } else {
                     txt.style.display = "none";
